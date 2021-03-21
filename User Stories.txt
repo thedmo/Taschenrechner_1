@@ -1,10 +1,9 @@
 Titel: Addieren
-Story: Als Benutzer möchte ich Zahlen addieren, um mir deren Summe anzeigen zu lassen
+Story: Als Benutzer möchte ich Zahlen addieren, um mir deren Summe anzeigen zu lassen.
 Anforderung: 
-	- Zahlen von 0 bis 9 können verwendet werden
+	- Gleitkommazahlen von 0.0 bis 10.0 können verwendet werden
+	- 
 Status:
-	- Implementiert
-	- getestet
 
 
 Titel: Starten
