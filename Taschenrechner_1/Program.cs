@@ -9,19 +9,20 @@ namespace Taschenrechner_1 {
             int ersteZahl;
 
             while (!int.TryParse(Console.ReadLine(), out ersteZahl)) {
-                Console.Write("keine Zahl, nochmal: ");
+                Console.Write("keine Zahl oder zu grosser Wert (Maximalwert: {0}). \n1. Summand eingeben: ", int.MaxValue);
             }
 
             Console.Write("2. Summand eingeben: ");
             int zweiteZahl;
-
             while (!int.TryParse(Console.ReadLine(), out zweiteZahl)) {
-                Console.Write("keine Zahl, nochmal: ");
+                Console.Write("keine Zahl oder zu grosser Wert (Maximalwert: {0}). \n2. Summand eingeben: ", int.MaxValue);
             }
 
-            int result = ersteZahl + zweiteZahl;
+            UInt64 result = (UInt64)ersteZahl + (UInt64)zweiteZahl;
 
-            Console.WriteLine("Das Resultat ist: " + result + "\n\nbeliebige Taste drücken zum Beenden...");
+
+
+            Console.WriteLine("Resultat: " + result +  "\n\nbeliebige Taste drücken zum Beenden...") ;
 
             Console.ReadKey();
         }
