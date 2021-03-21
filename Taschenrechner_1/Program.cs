@@ -20,8 +20,6 @@ namespace Taschenrechner_1 {
 
             UInt64 result = (UInt64)ersteZahl + (UInt64)zweiteZahl;
 
-
-
             Console.WriteLine("Resultat: " + result +  "\n\nbeliebige Taste drücken zum Beenden...") ;
 
             Console.ReadKey();
