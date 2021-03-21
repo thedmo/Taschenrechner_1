@@ -1,0 +1,14 @@
+Titel: Addieren
+Story: Als Benutzer möchte ich Zahlen addieren, um mir deren Summe anzeigen zu lassen
+Anforderung: 
+	- Zahlen von 0 bis 9 können verwendet werden
+Status:
+	- Implementiert
+	- getestet
+
+
+Titel: Starten
+Story: Als Benutzer möchte ich das Programm in 2 Sekunden einsatzbereit haben
+Anforderung: 
+	- Programm startet innerhalb von 2 Sekunden
+	- Programm läuft unter Windows 10
