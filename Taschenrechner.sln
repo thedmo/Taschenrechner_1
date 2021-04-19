@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5C69CBE8-9217-4281-8250-22824C455AD5}"
 	ProjectSection(SolutionItems) = preProject
-		Taschenrechner_1\User Stories.txt = Taschenrechner_1\User Stories.txt
+		Taschenrechner\User Stories.txt = Taschenrechner\User Stories.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taschenrechner", "Taschenrechner\Taschenrechner.csproj", "{A98C688E-90C8-40BD-A338-AB49EEB260D1}"
