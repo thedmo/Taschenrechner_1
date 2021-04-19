@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Taschenrechner_1 {
+namespace Taschenrechner {
     class Program {
         static void Main(string[] args) {
             do {
