@@ -1,8 +1,8 @@
 Titel: Addieren
 Story: Als Benutzer möchte ich Zahlen addieren, um mir deren Summe anzeigen zu lassen.
 Anforderung: 
-	- Gleitkommazahlen von 0.0 bis 10.0 können verwendet werden
-	- 
+	- Gleitkommazahlen zwischen -10.0 und 100.0 können verwendet werden
+
 Status:
 
 

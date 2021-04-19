@@ -3,26 +3,25 @@
 namespace Taschenrechner_1 {
     class Program {
         static void Main(string[] args) {
-            //Uer Story: Titel: Addieren Als Benutzer möchte ich Zahlen addieren, um mir deren Summe anzeigen zu lassen Anforderung: -Zahlen von 0 bis 9 können verwendet werden
+            do {
+                Console.Clear();
 
-            Console.Write("1. Summand eingeben: ");
-            float ersteZahl;
 
-            while (!float.TryParse(Console.ReadLine(), out ersteZahl)) {
-                Console.Write("keine Zahl oder zu grosser Wert (Maximalwert: {0:F}). \n1. Summand eingeben: ", float.MaxValue);
-            }
+                Console.Write("1. Summand eingeben: ");
+                string ersterSummand = Console.ReadLine();
 
-            Console.Write("2. Summand eingeben: ");
-            float zweiteZahl;
-            while (!float.TryParse(Console.ReadLine(), out zweiteZahl)) {
-                Console.Write("keine Zahl oder zu grosser Wert (Maximalwert: {0:F}). \n2. Summand eingeben: ", float.MaxValue);
-            }
+                Console.Write("2. Summand eingeben: ");
+                string zweiterSummand = Console.ReadLine();
 
-            double result = ersteZahl + zweiteZahl;
+                float ersteZahl = Convert.ToSingle(ersterSummand);
+                float zweiteZahl = Convert.ToSingle(zweiterSummand);
 
-            Console.WriteLine("Resultat: " + result +  "\n\nbeliebige Taste drücken zum Beenden...") ;
+                double result = ersteZahl + zweiteZahl;
 
-            Console.ReadKey();
+                Console.WriteLine("Resultat: " + Convert.ToSingle(result) + "\n\nbeliebige Taste drücken zum Beenden...");
+
+                Console.WriteLine("E drücken zum beenden, beliebige Taste drücken für weitere Berechnung");
+            } while (Console.ReadKey().Key != ConsoleKey.E);
         }
     }
 }
