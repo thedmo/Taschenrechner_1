@@ -1,10 +1,12 @@
 Titel: Addieren
-Story: Als Benutzer möchte ich Zahlen addieren, um mir deren Summe anzeigen zu lassen.
+Story: Als Benutzer möchte ich Zahlen eingeben, um mir deren Summe anzeigen zu lassen.
 Anforderung: 
 	- Gleitkommazahlen zwischen -10.0 und 100.0 können verwendet werden
 
 Status:
-
+	- Implementiert
+	- getestet
+	- erledigt
 
 Titel: Starten
 Story: Als Benutzer möchte ich das Programm in 2 Sekunden einsatzbereit haben
