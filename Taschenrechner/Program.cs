@@ -9,6 +9,7 @@ namespace Taschenrechner {
             //Eingabe
             string ersteEingabe = HoleBenutzerEingabe("1. Wert eingeben: ");
             string zweiteEingabe = HoleBenutzerEingabe("2. Wert eingeben: ");
+            string operation = HoleBenutzerEingabe("Operator eingeben (+ oder -): ");
 
             //Umwandlung zu Zahl
             // TODO: Auslagern in Methode, wenn Struktur umfangreicher geworden ist.
@@ -16,13 +17,18 @@ namespace Taschenrechner {
             double zweiteZahl = Convert.ToDouble(zweiteEingabe);
 
             //Berechnung
-            double result = Addiere(ersteZahl, zweiteZahl);
-            double result2 = Subtrahiere(ersteZahl, zweiteZahl);
-
-            //Ausgabe
-            Console.WriteLine("Summe der zwei Zahlen: " + result);
-            Console.WriteLine("Differenz der zwei Zahlen: " + result2);
-
+            double result = 0;
+            if (operation == "+") {
+                result = Addiere(ersteZahl, zweiteZahl);
+                Console.WriteLine("Die Summe beträgt: " + result);
+            }
+            else if (operation == "-") {
+                result = Subtrahiere(ersteZahl, zweiteZahl);
+                Console.WriteLine("Die Differenz beträgt: " + result);
+            }
+            else {
+                Console.WriteLine("Keine gültige Operation eingegeben..");
+            }
 
             //Beenden
             HoleBenutzerEingabe("Drücke Return zum beenden...");
