@@ -17,10 +17,10 @@ namespace Taschenrechner {
             double zweiteZahl = Convert.ToDouble(zweiteEingabe);
 
             //Berechnung
-            double result = Berechne(ersteZahl, zweiteZahl, operation);
+            double resultat = Berechne(ersteZahl, zweiteZahl, operation);
 
             //Ausgabe
-            Ausgabe(operation, result);
+            Ausgabe(operation, resultat);
 
             //Beenden
             HoleBenutzerEingabe("Drücke Return zum beenden...");
