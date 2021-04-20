@@ -7,7 +7,6 @@ namespace Taschenrechner {
             Console.Clear();
 
             string ersterSummand = HoleEingabe("1. Summand eingeben: ");
-
             string zweiterSummand = HoleEingabe("2. Summand eingeben: ");
 
             double ersteZahl = Convert.ToDouble(ersterSummand);
@@ -21,7 +20,7 @@ namespace Taschenrechner {
         }
 
         static string HoleEingabe(string ausgabeText) {
-            Console.WriteLine(ausgabeText);
+            Console.Write(ausgabeText);
             string s = Console.ReadLine();
             return s;
         }
