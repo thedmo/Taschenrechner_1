@@ -7,13 +7,13 @@ namespace Taschenrechner {
             Console.Clear();
 
             //Eingabe
-            string ersterSummand = HoleEingabe("1. Summand eingeben: ");
-            string zweiterSummand = HoleEingabe("2. Summand eingeben: ");
+            string ersteEingabe = HoleBenutzerEingabe("1. Wert eingeben: ");
+            string zweiteEingabe = HoleBenutzerEingabe("2. Wert eingeben: ");
 
             //Umwandlung zu Zahl
             // TODO: Auslagern in Methode, wenn Struktur umfangreicher geworden ist.
-            double ersteZahl = Convert.ToDouble(ersterSummand);
-            double zweiteZahl = Convert.ToDouble(zweiterSummand);
+            double ersteZahl = Convert.ToDouble(ersteEingabe);
+            double zweiteZahl = Convert.ToDouble(zweiteEingabe);
 
             //Berechnung
             double result = Addiere(ersteZahl, zweiteZahl);
@@ -25,10 +25,10 @@ namespace Taschenrechner {
 
 
             //Beenden
-            WarteAufBenutzerEingabe();
+            HoleBenutzerEingabe("Drücke Return zum beenden...");
         }
 
-        static string HoleEingabe(string ausgabeText) {
+        static string HoleBenutzerEingabe(string ausgabeText) {
             Console.Write(ausgabeText);
             string s = Console.ReadLine();
             return s;
@@ -42,11 +42,6 @@ namespace Taschenrechner {
         private static double Subtrahiere(double minuend, double subtrahend) {
             double differenz = minuend - subtrahend;
             return differenz;
-        }
-
-        static void WarteAufBenutzerEingabe() {
-            Console.WriteLine("Zum Beenden bitte Return drücken.");
-            Console.ReadLine();
         }
     }
 }
