@@ -17,31 +17,37 @@ namespace Taschenrechner {
             double zweiteZahl = Convert.ToDouble(zweiteEingabe);
 
             //Berechnung
-            double result = 0;
-            switch (operation) {
-                case "+":
-                    result = Addiere(ersteZahl, zweiteZahl);
-                    Console.WriteLine("Die Summe beträgt: " + result);
-                    break;
-                case "-":
-                    result = Subtrahiere(ersteZahl, zweiteZahl);
-                    Console.WriteLine("Die Differenz beträgt: " + result);
-                    break;
-                case "/":
-                    result = Dividiere(ersteZahl, zweiteZahl);
-                    Console.WriteLine("der Quotient beträgt: " + result);
-                    break;
-                case "*":
-                    result = Multipliziere(ersteZahl, zweiteZahl);
-                    Console.WriteLine("Das Produkt beträgt: " + result);
-                    break;
-                default:
-                    Console.WriteLine("Keine gültige Operation eingegeben..");
-                    break;
-            }
+            double result = Berechne(ersteZahl, zweiteZahl, operation);
+
+            //Ausgabe
+            Ausgabe(operation, result);
 
             //Beenden
             HoleBenutzerEingabe("Drücke Return zum beenden...");
+        }
+
+        private static void Ausgabe(string operation, double resultat) {
+            string ausgabeString = "";
+            
+            switch (operation) {
+                case "+":
+                    ausgabeString = "Die Summe beträgt: " + resultat;
+                    break;
+                case "-":
+                    ausgabeString = "Die Differenz beträgt: " + resultat;
+                    break;
+                case "/":
+                    ausgabeString = "Der Quotient beträgt: " + resultat;
+                    break;
+                case "*":
+                    ausgabeString = "Das Produkt beträgt: " + resultat;
+                    break;
+                default:
+                    ausgabeString = "Keine gültige Operation eingegeben..";
+                    break;
+            }
+
+            Console.WriteLine(ausgabeString);
         }
 
         static string HoleBenutzerEingabe(string ausgabeText) {
@@ -50,8 +56,29 @@ namespace Taschenrechner {
             return s;
         }
 
-        private static double Addiere(double ersteZahl, double zweiteZahl) {
-            double summe = ersteZahl + zweiteZahl;
+        private static double Berechne(double ersteZahl, double zweiteZahl, string operand) {
+            double resultat = 0;
+            switch (operand) {
+                case "+":
+                    resultat = Addiere(ersteZahl, zweiteZahl);
+                    break;
+                case "-":
+                    resultat = Subtrahiere(ersteZahl, zweiteZahl);
+                    break;
+                case "/":
+                    resultat = Dividiere(ersteZahl, zweiteZahl);
+                    break;
+                case "*":
+                    resultat = Multipliziere(ersteZahl, zweiteZahl);
+                    break;
+                default:
+                    break;
+            }
+            return resultat;
+        }
+
+        private static double Addiere(double ersterSummand, double zweiterSummand) {
+            double summe = ersterSummand + zweiterSummand;
             return summe;
         }
 
