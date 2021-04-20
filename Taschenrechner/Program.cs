@@ -18,16 +18,18 @@ namespace Taschenrechner {
 
             //Berechnung
             double result = 0;
-            if (operation == "+") {
-                result = Addiere(ersteZahl, zweiteZahl);
-                Console.WriteLine("Die Summe beträgt: " + result);
-            }
-            else if (operation == "-") {
-                result = Subtrahiere(ersteZahl, zweiteZahl);
-                Console.WriteLine("Die Differenz beträgt: " + result);
-            }
-            else {
-                Console.WriteLine("Keine gültige Operation eingegeben..");
+            switch (operation) {
+                case "+":
+                    result = Addiere(ersteZahl, zweiteZahl);
+                    Console.WriteLine("Die Summe beträgt: " + result);
+                    break;
+                case "-":
+                    result = Subtrahiere(ersteZahl, zweiteZahl);
+                    Console.WriteLine("Die Differenz beträgt: " + result);
+                    break;
+                default:
+                    Console.WriteLine("Keine gültige Operation eingegeben..");
+                    break;
             }
 
             //Beenden
