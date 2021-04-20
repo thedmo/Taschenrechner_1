@@ -13,14 +13,19 @@ namespace Taschenrechner {
             Console.Write("2. Summand eingeben: ");
             string zweiterSummand = Console.ReadLine();
 
-            float ersteZahl = Convert.ToSingle(ersterSummand);
-            float zweiteZahl = Convert.ToSingle(zweiterSummand);
+            double ersteZahl = Convert.ToDouble(ersterSummand);
+            double zweiteZahl = Convert.ToDouble(zweiterSummand);
 
-            double result = ersteZahl + zweiteZahl;
+            double result = Addiere(ersteZahl, zweiteZahl);
 
-            Console.WriteLine("Resultat: " + Convert.ToSingle(result) + "\n\nbeliebige Taste drücken zum Beenden...");
+            Console.WriteLine("Resultat: " + result);
 
             WarteAufBenutzerEingabe();
+        }
+
+        private static double Addiere(double ersteZahl, double zweiteZahl) {
+            double summe = ersteZahl + zweiteZahl;
+            return summe;
         }
 
         static void WarteAufBenutzerEingabe() {
