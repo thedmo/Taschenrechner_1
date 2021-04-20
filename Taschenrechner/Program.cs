@@ -17,9 +17,12 @@ namespace Taschenrechner {
 
             //Berechnung
             double result = Addiere(ersteZahl, zweiteZahl);
+            double result2 = Subtrahiere(ersteZahl, zweiteZahl);
 
             //Ausgabe
-            Console.WriteLine("Resultat: " + result);
+            Console.WriteLine("Summe der zwei Zahlen: " + result);
+            Console.WriteLine("Differenz der zwei Zahlen: " + result2);
+
 
             //Beenden
             WarteAufBenutzerEingabe();
