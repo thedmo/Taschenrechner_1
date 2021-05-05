@@ -1,30 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Taschenrechner {
+﻿namespace Taschenrechner {
     class RechnerModel {
-        public double Berechne(double ersteZahl, double zweiteZahl, string operand) {
-            double resultat = 0;
+        public double Resultat { get; private set; }
+
+        public RechnerModel() {
+            Resultat = 0;
+        }
+        public void Berechne(double ersteZahl, double zweiteZahl, string operand) {
             switch (operand) {
                 case "+":
-                    resultat = Addiere(ersteZahl, zweiteZahl);
+                    Resultat = Addiere(ersteZahl, zweiteZahl);
                     break;
                 case "-":
-                    resultat = Subtrahiere(ersteZahl, zweiteZahl);
+                    Resultat = Subtrahiere(ersteZahl, zweiteZahl);
                     break;
                 case "/":
-                    resultat = Dividiere(ersteZahl, zweiteZahl);
+                    Resultat = Dividiere(ersteZahl, zweiteZahl);
                     break;
                 case "*":
-                    resultat = Multipliziere(ersteZahl, zweiteZahl);
+                    Resultat = Multipliziere(ersteZahl, zweiteZahl);
                     break;
                 default:
                     break;
             }
-            return resultat;
         }
 
         private double Addiere(double ersterSummand, double zweiterSummand) {
