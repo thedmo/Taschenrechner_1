@@ -9,9 +9,9 @@ namespace Taschenrechner {
             ConsoleView console = new ConsoleView(model);
 
             //Eingabe
-            string ersteEingabe = console.HoleBenutzerEingabe("1. Wert eingeben: ");
-            string zweiteEingabe = console.HoleBenutzerEingabe("2. Wert eingeben: ");
-            string operation = console.HoleBenutzerEingabe("Operator eingeben (+, -, / oder *): ");
+            string ersteEingabe = console.HoleZahlVonBenutzer();
+            string operation = console.HoleOperandVonBenutzer();
+            string zweiteEingabe = console.HoleZahlVonBenutzer();
 
             //Umwandlung zu Zahl
             // TODO: Auslagern in Methode, wenn Struktur umfangreicher geworden ist.
@@ -25,7 +25,7 @@ namespace Taschenrechner {
             console.GebeResultatAus(operation);
 
             //Beenden
-            console.HoleBenutzerEingabe("Drücke Return zum beenden...");
+            console.WarteAufBenutzerEingabe();
         }
     }
 }

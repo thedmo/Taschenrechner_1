@@ -43,10 +43,19 @@ namespace Taschenrechner {
             Console.WriteLine(AusgabeString);
         }
 
-        public string HoleBenutzerEingabe(string ausgabeText) {
-            Console.Write(ausgabeText);
-            string s = Console.ReadLine();
-            return s;
+        public string HoleZahlVonBenutzer() {
+            Console.Write("Bitte Zahl eingeben: ");
+            return Console.ReadLine();
+        }
+
+        public string HoleOperandVonBenutzer() {
+            Console.Write("Bitte Operand eingeben (+, -, /, *): ");
+            return Console.ReadLine();
+        }
+
+        public void WarteAufBenutzerEingabe() {
+            Console.Write("Zum beenden bitte Return drücken...");
+            Console.ReadLine();
         }
     }
 }
