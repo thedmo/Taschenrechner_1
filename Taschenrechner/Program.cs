@@ -5,8 +5,8 @@ namespace Taschenrechner {
         static void Main(string[] args) {
             
             //Klassen instantiieren
-            ConsoleView console = new ConsoleView();
             RechnerModel model = new RechnerModel();
+            ConsoleView console = new ConsoleView(model);
 
             //Eingabe
             string ersteEingabe = console.HoleBenutzerEingabe("1. Wert eingeben: ");
@@ -22,7 +22,7 @@ namespace Taschenrechner {
             model.Berechne(ersteZahl, zweiteZahl, operation);
 
             //Ausgabe
-            console.GebeResultatAus(operation, model.Resultat);
+            console.GebeResultatAus(operation);
 
             //Beenden
             console.HoleBenutzerEingabe("Drücke Return zum beenden...");

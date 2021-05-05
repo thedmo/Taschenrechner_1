@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Taschenrechner {
     class ConsoleView {
+        private RechnerModel model;
 
         public string AusgabeString { get; private set; }
 
-        public ConsoleView() {
+        public ConsoleView(RechnerModel model) {
+            this.model = model;
+            
             //Ausgabe leeren
             Console.Clear();
 
@@ -17,20 +20,20 @@ namespace Taschenrechner {
             AusgabeString = "";
         }
 
-        public void GebeResultatAus(string operation, double resultat) {
+        public void GebeResultatAus(string operation) {
 
             switch (operation) {
                 case "+":
-                    AusgabeString = "Die Summe beträgt: " + resultat;
+                    AusgabeString = "Die Summe beträgt: " + model.Resultat;
                     break;
                 case "-":
-                    AusgabeString = "Die Differenz beträgt: " + resultat;
+                    AusgabeString = "Die Differenz beträgt: " + model.Resultat;
                     break;
                 case "/":
-                    AusgabeString = "Der Quotient beträgt: " + resultat;
+                    AusgabeString = "Der Quotient beträgt: " + model.Resultat;
                     break;
                 case "*":
-                    AusgabeString = "Das Produkt beträgt: " + resultat;
+                    AusgabeString = "Das Produkt beträgt: " + model.Resultat;
                     break;
                 default:
                     AusgabeString = "Keine gültige Operation eingegeben..";
