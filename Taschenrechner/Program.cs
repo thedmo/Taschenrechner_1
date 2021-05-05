@@ -17,7 +17,8 @@ namespace Taschenrechner {
             double zweiteZahl = Convert.ToDouble(zweiteEingabe);
 
             //Berechnung
-            double resultat = Berechne(ersteZahl, zweiteZahl, operation);
+            RechnerModel model = new RechnerModel();
+            double resultat = model.Berechne(ersteZahl, zweiteZahl, operation);
 
             //Ausgabe
             Ausgabe(operation, resultat);
@@ -54,47 +55,6 @@ namespace Taschenrechner {
             Console.Write(ausgabeText);
             string s = Console.ReadLine();
             return s;
-        }
-
-        private static double Berechne(double ersteZahl, double zweiteZahl, string operand) {
-            double resultat = 0;
-            switch (operand) {
-                case "+":
-                    resultat = Addiere(ersteZahl, zweiteZahl);
-                    break;
-                case "-":
-                    resultat = Subtrahiere(ersteZahl, zweiteZahl);
-                    break;
-                case "/":
-                    resultat = Dividiere(ersteZahl, zweiteZahl);
-                    break;
-                case "*":
-                    resultat = Multipliziere(ersteZahl, zweiteZahl);
-                    break;
-                default:
-                    break;
-            }
-            return resultat;
-        }
-
-        private static double Addiere(double ersterSummand, double zweiterSummand) {
-            double summe = ersterSummand + zweiterSummand;
-            return summe;
-        }
-
-        private static double Subtrahiere(double minuend, double subtrahend) {
-            double differenz = minuend - subtrahend;
-            return differenz;
-        }
-
-        private static double Dividiere(double dividend, double divisor) {
-            double quotient = dividend / divisor;
-            return quotient;
-        }
-
-        private static double Multipliziere (double ersterFaktor, double zweiterFaktor) {
-            double produkt = ersterFaktor * zweiterFaktor;
-            return produkt;
         }
     }
 }
