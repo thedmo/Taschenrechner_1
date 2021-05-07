@@ -43,9 +43,9 @@ namespace Taschenrechner {
             Console.WriteLine(AusgabeString);
         }
 
-        public string HoleZahlVonBenutzer() {
+        public double HoleZahlVonBenutzer() {
             Console.Write("Bitte Zahl eingeben: ");
-            return Console.ReadLine();
+            return Convert.ToDouble(Console.ReadLine());
         }
 
         public string HoleOperandVonBenutzer() {
