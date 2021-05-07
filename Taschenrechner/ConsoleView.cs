@@ -72,12 +72,6 @@ namespace Taschenrechner {
             Console.Write("Bitte Zahl eingeben: ");
             eingabe = Console.ReadLine();
 
-            if (eingabe == "FERTIG") {
-                BenutzerWillBeenden = true;
-
-                eingabe = "0.0";
-            }
-
             return Convert.ToDouble(eingabe);
         }
 
