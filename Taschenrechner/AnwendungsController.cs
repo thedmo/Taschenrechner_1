@@ -22,7 +22,7 @@ namespace Taschenrechner {
             model.Berechne(ersteZahl, zweiteZahl, operation);
 
             //Ausgabe
-            console.GebeResultatAus(operation);
+            console.GebeResultatAus();
 
             //Beenden
             console.WarteAufBenutzerEingabe();

@@ -20,9 +20,9 @@ namespace Taschenrechner {
             AusgabeString = "";
         }
 
-        public void GebeResultatAus(string operation) {
+        public void GebeResultatAus() {
 
-            switch (operation) {
+            switch (model.Operation) {
                 case "+":
                     AusgabeString = "Die Summe beträgt: " + model.Resultat;
                     break;
