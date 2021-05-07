@@ -1,27 +1,28 @@
 ﻿namespace Taschenrechner {
     class RechnerModel {
         public double Resultat { get; private set; }
-        public string Operation { get; private set; }
+        public string Operation { get; set; }
+        public double ErsteZahl { get; set; }
+        public double ZweiteZahl { get; set; }
 
         public RechnerModel() {
             Resultat = 0;
             Operation = "unbekannt";
         }
-        public void Berechne(double ersteZahl, double zweiteZahl, string operation) {
-            Operation = operation;
 
-            switch (operation) {
+        public void Berechne() {
+            switch (Operation) {
                 case "+":
-                    Resultat = Addiere(ersteZahl, zweiteZahl);
+                    Resultat = Addiere(ErsteZahl, ZweiteZahl);
                     break;
                 case "-":
-                    Resultat = Subtrahiere(ersteZahl, zweiteZahl);
+                    Resultat = Subtrahiere(ErsteZahl, ZweiteZahl);
                     break;
                 case "/":
-                    Resultat = Dividiere(ersteZahl, zweiteZahl);
+                    Resultat = Dividiere(ErsteZahl, ZweiteZahl);
                     break;
                 case "*":
-                    Resultat = Multipliziere(ersteZahl, zweiteZahl);
+                    Resultat = Multipliziere(ErsteZahl, ZweiteZahl);
                     break;
                 default:
                     break;

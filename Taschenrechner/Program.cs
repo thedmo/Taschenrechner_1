@@ -7,7 +7,7 @@
             ConsoleView console = new ConsoleView(model);
             AnwendungsController controller = new AnwendungsController(model, console);
 
-            controller.StarteProgramm();
+            controller.Ausführen();
         }
     }
 }

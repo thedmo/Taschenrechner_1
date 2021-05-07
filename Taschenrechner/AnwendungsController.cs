@@ -11,15 +11,13 @@ namespace Taschenrechner {
             this.console = console;
         }
 
-        public void StarteProgramm() {
+        public void Ausführen() {
 
             //Eingabe
-            double ersteZahl = console.HoleZahlVonBenutzer();
-            string operation = console.HoleOperandVonBenutzer();
-            double zweiteZahl = console.HoleZahlVonBenutzer();
+            console.HoleBenutzerEingabe();
 
             //Berechnung
-            model.Berechne(ersteZahl, zweiteZahl, operation);
+            model.Berechne();
 
             //Ausgabe
             console.GebeResultatAus();
@@ -27,6 +25,5 @@ namespace Taschenrechner {
             //Beenden
             console.WarteAufBenutzerEingabe();
         }
-
     }
 }

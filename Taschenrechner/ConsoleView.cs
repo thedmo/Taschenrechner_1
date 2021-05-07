@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Taschenrechner {
     class ConsoleView {
@@ -12,7 +8,7 @@ namespace Taschenrechner {
 
         public ConsoleView(RechnerModel model) {
             this.model = model;
-            
+
             //Ausgabe leeren
             Console.Clear();
 
@@ -21,7 +17,6 @@ namespace Taschenrechner {
         }
 
         public void GebeResultatAus() {
-
             switch (model.Operation) {
                 case "+":
                     AusgabeString = "Die Summe beträgt: " + model.Resultat;
@@ -43,12 +38,18 @@ namespace Taschenrechner {
             Console.WriteLine(AusgabeString);
         }
 
-        public double HoleZahlVonBenutzer() {
+        public void HoleBenutzerEingabe() {
+            model.ErsteZahl = HoleZahlVonBenutzer();
+            model.Operation = HoleOperandVonBenutzer();
+            model.ZweiteZahl = HoleZahlVonBenutzer();
+        }
+
+        private double HoleZahlVonBenutzer() {
             Console.Write("Bitte Zahl eingeben: ");
             return Convert.ToDouble(Console.ReadLine());
         }
 
-        public string HoleOperandVonBenutzer() {
+        private string HoleOperandVonBenutzer() {
             Console.Write("Bitte Operand eingeben (+, -, /, *): ");
             return Console.ReadLine();
         }
