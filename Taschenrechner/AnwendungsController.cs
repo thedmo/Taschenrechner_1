@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Taschenrechner {
+﻿namespace Taschenrechner {
     class AnwendungsController {
 
         RechnerModel model;
@@ -12,18 +10,19 @@ namespace Taschenrechner {
         }
 
         public void Ausführen() {
-
-            //Eingabe
-            console.HoleBenutzerEingabe();
-
-            //Berechnung
+            console.HoleErsteBenutzerEingaben();
+            
             model.Berechne();
 
-            //Ausgabe
             console.GebeResultatAus();
+            console.HoleWeitereBenutzerEingabe();
 
-            //Beenden
-            console.WarteAufBenutzerEingabe();
+            while (!console.BenutzerWillBeenden) {
+                model.Berechne();
+
+                console.GebeResultatAus();
+                console.HoleWeitereBenutzerEingabe();
+            }
         }
     }
 }

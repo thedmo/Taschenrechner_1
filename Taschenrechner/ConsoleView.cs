@@ -6,6 +6,9 @@ namespace Taschenrechner {
 
         public string AusgabeString { get; private set; }
 
+        public bool BenutzerWillBeenden { get; private set; }
+
+
         public ConsoleView(RechnerModel model) {
             this.model = model;
 
@@ -14,6 +17,8 @@ namespace Taschenrechner {
 
             //AusgabeString initialisieren
             AusgabeString = "";
+
+            BenutzerWillBeenden = false;
         }
 
         public void GebeResultatAus() {
@@ -38,25 +43,52 @@ namespace Taschenrechner {
             Console.WriteLine(AusgabeString);
         }
 
-        public void HoleBenutzerEingabe() {
+
+
+        public void HoleErsteBenutzerEingaben() {
             model.ErsteZahl = HoleZahlVonBenutzer();
             model.Operation = HoleOperandVonBenutzer();
             model.ZweiteZahl = HoleZahlVonBenutzer();
         }
 
+        public void HoleWeitereBenutzerEingabe() {
+
+            string eingabe = HoleWeitereZahlVonBenutzer();
+
+            if (eingabe.ToLower() == "fertig") {
+                BenutzerWillBeenden = true;
+            }
+            else {
+
+                model.ErsteZahl = model.Resultat;
+
+                model.ZweiteZahl = Convert.ToDouble(eingabe);
+            }
+
+        }
+
         private double HoleZahlVonBenutzer() {
+            string eingabe;
             Console.Write("Bitte Zahl eingeben: ");
-            return Convert.ToDouble(Console.ReadLine());
+            eingabe = Console.ReadLine();
+
+            if (eingabe == "FERTIG") {
+                BenutzerWillBeenden = true;
+
+                eingabe = "0.0";
+            }
+
+            return Convert.ToDouble(eingabe);
+        }
+
+        private string HoleWeitereZahlVonBenutzer() {
+            Console.Write("Weitere Zahl Eingeben (tippe \"Fertig\" zum Beenden):");
+            return Console.ReadLine();
         }
 
         private string HoleOperandVonBenutzer() {
             Console.Write("Bitte Operand eingeben (+, -, /, *): ");
             return Console.ReadLine();
-        }
-
-        public void WarteAufBenutzerEingabe() {
-            Console.Write("Zum beenden bitte Return drücken...");
-            Console.ReadLine();
         }
     }
 }
