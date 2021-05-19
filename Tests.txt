@@ -1,0 +1,32 @@
+Unit Tests:
+
+Zahlen eingeben:
+	Fall: keine Zahl eingeben 
+	Erwartung: Ausgabe, dass falsche Zahl eingegeben wurde, erneute Abrage der Zahl
+	Ergebnis: Absturz
+	
+	Fall: Buchstaben eingeben
+	Erwartung: Ausgabe, dass falsche Zahl eingegeben wurde, erneute Abrage der Zahl
+	Ergebnis: Absturz
+
+	Fall: Zahl mit Komma eingeben
+	Erwartung: Berechnung, wie mit Punkt
+	Ergebnis: Absturz
+
+	Fall: Hochkomma als Tausender Trennzeichen
+	Erwartung: Hochkomma wird ignoriert
+	Ergebnis: Resultat entspricht Erwartung
+
+	Fall: Zahl mit Punkt eingeben ohne eine Zahl davor
+	Erwartung: Berechnung, wie mit einer Null davor
+	Ergebnis: entspricht Erwartung
+
+	Fall: Gebe Zahl ein über dem Grenzwert des Datentyps "Double"
+	Erwartung: Ausgabe, dass Zahl zu gross
+	Ergebnis: falsches Resultat wird ausgegeben: 8 (für Unendlich)
+
+
+Operation:
+	Fall: falsche Operation eingeben
+	Erwartung: Ausgabe, dass falsche Eingabe gemacht wurde, erneute Abfrage
+	Ergebnis: Absturz
