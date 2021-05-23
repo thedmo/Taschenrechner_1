@@ -25,6 +25,9 @@ Zahlen eingeben:
 	Erwartung: Ausgabe, dass Zahl zu gross
 	Ergebnis: falsches Resultat wird ausgegeben: 8 (für Unendlich)
 
+	Fall: Division geteilt durch 0
+	Erwartung: Ausgabe, dass durch null dividiert wurde / Unendlich
+	Ergebnis: 8
 
 Operation:
 	Fall: falsche Operation eingeben

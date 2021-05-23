@@ -11,18 +11,14 @@
 
         public void Ausführen() {
             console.HoleErsteBenutzerEingaben();
-            
-            model.Berechne();
-
-            console.GebeResultatAus();
-            console.HoleWeitereBenutzerEingabe();
-
-            while (!console.BenutzerWillBeenden) {
+            do {
                 model.Berechne();
 
                 console.GebeResultatAus();
                 console.HoleWeitereBenutzerEingabe();
-            }
+
+
+            } while (!console.BenutzerWillBeenden);
         }
     }
 }

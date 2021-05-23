@@ -43,46 +43,95 @@ namespace Taschenrechner {
             Console.WriteLine(AusgabeString);
         }
 
-
-
         public void HoleErsteBenutzerEingaben() {
-            model.ErsteZahl = HoleZahlVonBenutzer();
-            model.Operation = HoleOperandVonBenutzer();
-            model.ZweiteZahl = HoleZahlVonBenutzer();
+            HoleErsteZahlVonBenutzer();
+
+            model.Operation = HoleOperationVonBenutzer();
+
+            HoleZweiteZahlVonBenutzer();
         }
 
         public void HoleWeitereBenutzerEingabe() {
-
-            string eingabe = HoleWeitereZahlVonBenutzer();
-
-            if (eingabe.ToLower() == "fertig") {
-                BenutzerWillBeenden = true;
-            }
-            else {
-
-                model.ErsteZahl = model.Resultat;
-
-                model.ZweiteZahl = Convert.ToDouble(eingabe);
-            }
-
+            model.ErsteZahl = model.Resultat;
+            HoleZweiteZahlVonBenutzer();
         }
 
-        private double HoleZahlVonBenutzer() {
+        private void HoleErsteZahlVonBenutzer() {
             string eingabe;
-            Console.Write("Bitte Zahl eingeben: ");
-            eingabe = Console.ReadLine();
 
-            return Convert.ToDouble(eingabe);
+            if (BenutzerWillBeenden) {
+                return;
+            }
+            do {
+                Console.WriteLine("Zahl eingeben (tippe \"fertig\" zum Beenden)");
+                eingabe = Console.ReadLine();
+
+                if (eingabe.ToLower() == "fertig") {
+                    BenutzerWillBeenden = true;
+                }
+                else {
+                    model.ErsteZahl = KonvertiereZahl(eingabe);
+                    if (model.AktuellerFehler == Fehler.GrenzwertUeberschreitung) {
+                        Console.WriteLine("Fehler: die eingegebene Zahl ist ausserhalb des Erlaubten Bereiches von -10.0 und 100.0");
+                    }
+                }
+            } while (model.AktuellerFehler == Fehler.GrenzwertUeberschreitung && !BenutzerWillBeenden);
         }
 
-        private string HoleWeitereZahlVonBenutzer() {
-            Console.Write("Weitere Zahl Eingeben (tippe \"Fertig\" zum Beenden):");
-            return Console.ReadLine();
+        private void HoleZweiteZahlVonBenutzer() {
+            string eingabe;
+
+            if (BenutzerWillBeenden) {
+                return;
+            }
+            do {
+                Console.WriteLine("Zahl eingeben (tippe \"fertig\" zum Beenden)");
+                eingabe = Console.ReadLine();
+
+                if (eingabe.ToLower() == "fertig") {
+                    BenutzerWillBeenden = true;
+                }
+                else {
+                    model.ZweiteZahl = KonvertiereZahl(eingabe);
+                    if (model.AktuellerFehler == Fehler.GrenzwertUeberschreitung) {
+                        Console.WriteLine("Fehler: die eingegebene Zahl ist ausserhalb des Erlaubten Bereiches von -10.0 und 100.0");
+                    }
+                }
+            } while (model.AktuellerFehler == Fehler.GrenzwertUeberschreitung && !BenutzerWillBeenden);
         }
 
-        private string HoleOperandVonBenutzer() {
-            Console.Write("Bitte Operand eingeben (+, -, /, *): ");
-            return Console.ReadLine();
+        private double KonvertiereZahl(string eingabe) {
+
+            double zahl;
+
+            while (!double.TryParse(eingabe, out zahl)) {
+                Console.WriteLine("Fehler: unerlaubte Sonderzeichen oder leere Zahl. Erlaubte Sonderzeichen:\n. für Komma, ' für Tausendertrennung, - zur Angabe von Negativen Zahlen.");
+                Console.Write("Bitte Zahl eingeben: ");
+                eingabe = Console.ReadLine();
+            }
+
+            return zahl;
+        }
+
+        private string HoleOperationVonBenutzer() {
+            if (BenutzerWillBeenden) {
+                return "";
+            }
+
+            string operation;
+            do {
+                Console.Write("Bitte Operand eingeben (+, -, /, *): ");
+                operation = Console.ReadLine();
+
+                model.Operation = operation;
+
+                if (model.AktuellerFehler == Fehler.UngueltigeOperation) {
+                    Console.WriteLine("FEHLER: die eingegebene Operation wird nicht unterstützt.");
+                }
+
+            } while (model.AktuellerFehler == Fehler.UngueltigeOperation);
+
+            return operation;
         }
     }
 }
