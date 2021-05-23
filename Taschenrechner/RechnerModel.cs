@@ -71,9 +71,9 @@
         }
 
         public RechnerModel() {
+            AktuellerFehler = Fehler.Keiner;
             Resultat = 0;
             Operation = "unbekannt";
-            AktuellerFehler = Fehler.Keiner;
         }
 
         public void FehlerZuruecksetzen() {

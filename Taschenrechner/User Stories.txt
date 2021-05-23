@@ -3,7 +3,9 @@ User Story Vorlage: Als <Rolle/Anwendertyp> möchte ich <Ziel/Wunsch/Funktion>, 
 Titel: Beenden
 Story: Als Benutzer möchte ich "Fertig" anstelle einer weiteren Zahl eingeben, um den Taschenrechner zu beenden.
 Status:
-	- offen
+	- implementiert
+	- getestet
+	- erledigt
 
 Titel: fortlaufende Berechnung
 Story: als Benutzer möchte ich eine weitere Zahl eingeben, um die vorherige Operation nochmals auszuführen mit dem vorherigen Resultat
