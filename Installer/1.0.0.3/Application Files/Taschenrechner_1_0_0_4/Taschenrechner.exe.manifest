@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Taschenrechner.exe" version="1.0.0.4" publicKeyToken="a80bcd99a16593d1" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Taschenrechner" version="1.0.7817.30276" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Taschenrechner.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC-Manifestoptionen
+             Wenn Sie die Ebene der Benutzerkontensteuerung für Windows ändern möchten, ersetzen Sie den 
+             Knoten "requestedExecutionLevel" wie folgt.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Durch Angabe des Elements "requestedExecutionLevel" wird die Datei- und Registrierungsvirtualisierung deaktiviert. 
+            Entfernen Sie dieses Element, wenn diese Virtualisierung aus Gründen der Abwärtskompatibilität
+            für die Anwendung erforderlich ist.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Taschenrechner.exe" size="10656">
+      <assemblyIdentity name="Taschenrechner" version="1.0.7817.30276" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>RJm8Ioys+CQAYldkBqHnNHeao7Z6Gm9xqPCkn7TmsII=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Taschenrechner.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Eine Liste der Windows-Versionen, unter denen diese Anwendung getestet
+           und für die sie entwickelt wurde. Wenn Sie die Auskommentierung der entsprechenden Elemente aufheben,
+           wird von Windows automatisch die kompatibelste Umgebung ausgewählt. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=KOLOSS\Ben" issuerKeyHash="dfb93d50f63b53378c7379936cc9fe532e80342c" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>1bQhlKTEWploMU4gczuGgtutOI0NmKvKOovOVGogCVs=</DigestValue></Reference></SignedInfo><SignatureValue>VPAs4mHguYnhNOTwqcmb5rk4k0kLb1qebfKtpVZZRvxAwCWuZv6Lx/xmY7CA0tgevZ2sYkDnk9bqRRe3sLXzAJ1cgEwrb8WBDAotYxmELOpwt2OW9eVdHQLvNeh+9dx7x4Po+R5WNLiNWpUaSRnSq4czhxJfhMw/v0RTIyzCQkw=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>33D8scaUjZkuHqjd3YcGFZoTXeOV51ajc4gt2c2xQw8jr2S2KyY4Bytv/NWrQpkRWXPs7TymYzYxzK5JjBYnWy2BKoR5spk9zqrsi6JpuZP/ZpAIhsvDzD8MUUs/UD31WwH6TZk1c+jbVfmLk1cSX0C+2WfnNbDS9/SynNRg5PU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="5b09206a54ce8b3acaab980d8d38addb82863b73204e3168995ac4a49421b4d5" Description="" Url=""><as:assemblyIdentity name="Taschenrechner.exe" version="1.0.0.4" publicKeyToken="a80bcd99a16593d1" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=KOLOSS\Ben</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>4qFJo3QSIhPUP6dXkCn9e3xADldw6keTAQQP2dBYlgs=</DigestValue></Reference></SignedInfo><SignatureValue>2RkeN9EcPEW3Bxt1GA/vhJiaakZ4N+9xBFjyauy/AaMg4xac0ceg0IQ0NwOaLu8CEeStWjzxcDXKm0yDpCviDjAb+Z/D5tXw8PVEgyxB/f5+D2pPJAcsuXjFSzyx6kuKUkdSmSKPlhMc7087e9uhinMAkIlVNrNA/U/P5gc2CbY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>33D8scaUjZkuHqjd3YcGFZoTXeOV51ajc4gt2c2xQw8jr2S2KyY4Bytv/NWrQpkRWXPs7TymYzYxzK5JjBYnWy2BKoR5spk9zqrsi6JpuZP/ZpAIhsvDzD8MUUs/UD31WwH6TZk1c+jbVfmLk1cSX0C+2WfnNbDS9/SynNRg5PU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBwTCCASqgAwIBAgIQLeQJPp3wkoxHgMOZ08s0QTANBgkqhkiG9w0BAQsFADAfMR0wGwYDVQQDHhQASwBPAEwATwBTAFMAXABCAGUAbjAeFw0yMTA1MjcxNDM4MThaFw0yMjA1MjcyMDM4MThaMB8xHTAbBgNVBAMeFABLAE8ATABPAFMAUwBcAEIAZQBuMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDfcPyxxpSNmS4eqN3dhwYVmhNd45XnVqNziC3ZzbFDDyOvZLYrJjgHK2/81atCmRFZc+ztPKZjNjHMrkmMFidbLYEqhHmymT3OquyLomm5k/9mkAiGy8PMPwxRSz9QPfVbAfpNmTVz6NtV+YuTVxJfQL7ZZ+c1sNL39LKc1GDk9QIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAGI3FaT0ppg/69nCmY3hob7vq9VIRDZWWCSv+JrLiVsBBw8qHOXjcepFP7BfjkbgDOApmsrzRPz1Im5Jfwbu1nFpSRzLxPWp1eJS3BZrOrUtF139W8EXD/0koNpMR0IFVxG+0rbmEnK3pIRccLx7WDRd0dTJ7leKkWDyvDyYfm3g</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
